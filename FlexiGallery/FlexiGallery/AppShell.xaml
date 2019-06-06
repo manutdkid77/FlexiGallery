@@ -70,11 +70,14 @@
 
     <!-- Your Pages -->
     <ShellItem>
-        <ShellSection Title="Browse" Icon="tab_feed.png">
+        <!--<ShellSection Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </ShellSection>
         <ShellSection Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        </ShellSection>-->
+        <ShellSection Title="Gallery" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:GalleryPage}" />
         </ShellSection>
     </ShellItem>
 
