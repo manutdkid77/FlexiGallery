@@ -3,20 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlexiGallery.Views.GalleryPage">
     <ContentPage.Content>
-        <ScrollView Orientation="Vertical">
-            <FlexLayout x:Name="flxContainer" Direction="Row" Wrap="Wrap" JustifyContent="SpaceAround" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <BoxView BackgroundColor="Tomato"></BoxView>
-                <BoxView BackgroundColor="Yellow"></BoxView>
-                <BoxView BackgroundColor="Teal"></BoxView>
-                <BoxView BackgroundColor="Gold"></BoxView>
-                <BoxView BackgroundColor="Green"></BoxView>
-                <BoxView BackgroundColor="Blue"></BoxView>
-                <BoxView BackgroundColor="Tomato"></BoxView>
-                <BoxView BackgroundColor="Yellow"></BoxView>
-                <BoxView BackgroundColor="Teal"></BoxView>
-                <BoxView BackgroundColor="Gold"></BoxView>
-                <BoxView BackgroundColor="Green"></BoxView>
-                <BoxView BackgroundColor="Blue"></BoxView>
+        <ScrollView>
+            <FlexLayout x:Name="flxContainer" Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" HasShadow="False" Visual="Material" CornerRadius="0">
+                            <Image Aspect="AspectFill" Source="https://dummyimage.com/200x200/2bd69a/fff" />
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>

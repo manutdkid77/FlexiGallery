@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XE = Xamarin.Essentials;
 using Debug = System.Diagnostics.Debug;
 
 namespace FlexiGallery.Views
@@ -14,25 +9,51 @@ namespace FlexiGallery.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GalleryPage : ContentPage
     {
+        private int iNumOfSquares = 3;
         public GalleryPage()
         {
             InitializeComponent();
-            this.SizeChanged += GalleryPage_SizeChanged;
+            BindFlexLayout();
         }
 
         private void GalleryPage_SizeChanged(object sender, EventArgs e)
         {
-            //var dbDeviceWidth = XE.DeviceDisplay.MainDisplayInfo.Width;
-            //Debug.WriteLine($"{nameof(dbDeviceWidth)} is {dbDeviceWidth}");
-            //var fltFlexBasis = (float)((dbDeviceWidth / 3) / 100);
-            //var fltFlexBasis = (float)(dbDeviceWidthSplit / 3) / 100;
+            AdjustSquareDimensions();
+        }
+        private void BindFlexLayout()
+        {
+            var items = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+            BindableLayout.SetItemsSource(flxContainer, items);
+            AdjustSquareDimensions();
+        }
 
-            var fltFlexBasis = (((float)100 / 3) / 100);
+        private void AdjustSquareDimensions()
+        {
+            var dbSide = Width / iNumOfSquares;
 
             foreach (var child in flxContainer.Children)
             {
-                FlexLayout.SetBasis(child, new FlexBasis(fltFlexBasis, isRelative:true));
+                if (child is Frame frame)
+                {
+                    if (dbSide != frame.WidthRequest || dbSide != frame.HeightRequest)
+                    {
+                        frame.WidthRequest = dbSide;
+                        frame.HeightRequest = dbSide;
+                    }
+                }
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            SizeChanged += GalleryPage_SizeChanged;
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            SizeChanged -= GalleryPage_SizeChanged;
         }
     }
 }
