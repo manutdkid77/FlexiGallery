@@ -10,7 +10,7 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Frame Padding="0" HasShadow="False" Visual="Material" CornerRadius="0">
-                                <Image Aspect="AspectFill" Source="https://dummyimage.com/200x200/2bd69a/fff" />
+                                <Image Aspect="AspectFill" Source="{Binding .}" />
                             </Frame>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>

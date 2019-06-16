@@ -22,13 +22,20 @@ namespace FlexiGallery.Views
         }
         private void BindFlexLayout()
         {
-            var items = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+            var items = new List<string>();
+            for(var i = 1; i < 26; i++)
+            {
+                items.Add($"https://picsum.photos/200?random={i}");
+            }
             BindableLayout.SetItemsSource(flxContainer, items);
             AdjustSquareDimensions();
         }
 
         private void AdjustSquareDimensions()
         {
+            if (Width <= 0 || iNumOfSquares<=0)
+                return;
+
             var dbSide = Width / iNumOfSquares;
 
             foreach (var child in flxContainer.Children)
