@@ -6,7 +6,7 @@
         <ScrollView>
             <StackLayout>
                 <Stepper Minimum="1" Value="3" ValueChanged="Stepper_ValueChanged" HorizontalOptions="Center" Visual="Material"></Stepper>
-                <FlexLayout x:Name="flxContainer" Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween">
+                <FlexLayout x:Name="flxContainer" Direction="Row" Wrap="Wrap" JustifyContent="Start" AlignContent="Start">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Frame Padding="0" HasShadow="False" Visual="Material" CornerRadius="0">

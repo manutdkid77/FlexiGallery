@@ -9,7 +9,7 @@ namespace FlexiGallery.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GalleryPage : ContentPage
     {
-        private int iNumOfSquares = 4;
+        private int iNumOfSquares = 3;
         public GalleryPage()
         {
             InitializeComponent();
