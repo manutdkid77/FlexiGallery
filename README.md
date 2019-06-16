@@ -13,9 +13,11 @@ This was done to make the PodcastDirectoryPage of [Hanselman.Forms](https://gith
 * Here each square has a side calculated as  `Width Of Device` divided by the `Number Of Squares`
 
 ### AIM
-![AntennaPod_portrait](url)
-![AntennaPod_landscape](url)
+![AntennaPod_portrait](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/antennapod_1.png)
+
+![AntennaPod_landscape](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/antennapod_2.png.png)
 
 ### RESULT
-![FlexiGallery_Screenshot_GIF](url)
-![FlexiGallery_Screenshot1](url)
+![FlexiGallery_Screenshot_GIF](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/flexigallery.gif)
+
+![FlexiGallery_Screenshot1](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/flexigallery_1.png)
