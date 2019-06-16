@@ -35,11 +35,8 @@ namespace FlexiGallery.Views
             {
                 if (child is Frame frame)
                 {
-                    if (dbSide != frame.WidthRequest || dbSide != frame.HeightRequest)
-                    {
-                        frame.WidthRequest = dbSide;
-                        frame.HeightRequest = dbSide;
-                    }
+                    frame.WidthRequest = dbSide;
+                    frame.HeightRequest = dbSide;
                 }
             }
         }
