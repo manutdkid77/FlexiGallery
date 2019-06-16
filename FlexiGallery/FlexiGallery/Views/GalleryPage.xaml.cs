@@ -9,7 +9,7 @@ namespace FlexiGallery.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GalleryPage : ContentPage
     {
-        private int iNumOfSquares = 3;
+        private int iNumOfSquares = 4;
         public GalleryPage()
         {
             InitializeComponent();
@@ -54,6 +54,12 @@ namespace FlexiGallery.Views
         {
             base.OnDisappearing();
             SizeChanged -= GalleryPage_SizeChanged;
+        }
+
+        private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            iNumOfSquares = (int)e.NewValue;
+            AdjustSquareDimensions();
         }
     }
 }
