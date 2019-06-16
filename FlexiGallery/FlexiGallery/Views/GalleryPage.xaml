@@ -4,7 +4,7 @@
              x:Class="FlexiGallery.Views.GalleryPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout CompressedLayout.IsHeadless="True">
                 <Stepper Minimum="1" Value="3" ValueChanged="Stepper_ValueChanged" HorizontalOptions="Center" Visual="Material"></Stepper>
                 <FlexLayout x:Name="flxContainer" Direction="Row" Wrap="Wrap" JustifyContent="Start" AlignContent="Start">
                     <BindableLayout.ItemTemplate>
