@@ -48,18 +48,6 @@ namespace FlexiGallery.Views
             }
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            SizeChanged += GalleryPage_SizeChanged;
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-            SizeChanged -= GalleryPage_SizeChanged;
-        }
-
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             iNumOfSquares = (int)e.NewValue;
