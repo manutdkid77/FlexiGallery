@@ -20,4 +20,6 @@ This was done to make the PodcastDirectoryPage of [Hanselman.Forms](https://gith
 ### RESULT
 ![FlexiGallery_Screenshot_GIF](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/flexigallery.gif)
 
-![FlexiGallery_Screenshot1](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/flexigallery_1.png)
+![FlexiGallery_Screenshot_Android](https://raw.githubusercontent.com/manutdkid77/FlexiGallery/master/screenshots/flexigallery_1.png)
+
+![FlexiGallery_Screenshot_iOS](url_here)
