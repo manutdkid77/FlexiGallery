@@ -36,7 +36,7 @@ namespace FlexiGallery.Views
             if (Width <= 0 || iNumOfSquares<=0)
                 return;
 
-            var dbSide = Width / iNumOfSquares;
+            var dbSide = Math.Floor(Width / iNumOfSquares);
 
             foreach (var child in flxContainer.Children)
             {
