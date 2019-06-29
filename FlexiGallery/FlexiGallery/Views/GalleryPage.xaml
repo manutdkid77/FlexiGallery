@@ -12,7 +12,12 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Frame Padding="0" HasShadow="False" Visual="Material" CornerRadius="0">
-                                <Image Aspect="AspectFill" Source="{Binding .}" />
+                                <Image Aspect="AspectFill">
+                                    <Image.Source>
+                                        <UriImageSource Uri="{Binding .}" CachingEnabled="False">
+                                        </UriImageSource>
+                                    </Image.Source>
+                                </Image>
                             </Frame>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
